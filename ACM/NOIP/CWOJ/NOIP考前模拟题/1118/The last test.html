@@ -1,0 +1,165 @@
+<p>时间限制均为 1s，内存限制均为 128M。评测在 macOS 下的 Lemon 中进行。</p>
+
+
+
+<h1 id="筷子-100-分">筷子 （100 分）</h1>
+
+<p>hwj 有一些筷子。他将筷子摆在 X 轴上的某些位置，有些筷子有重叠。现在他想去掉一些筷子，使筷子不重叠，请问最少要去掉多少根筷子？</p>
+
+<h2 id="输入格式">输入格式</h2>
+
+<p>输入文件名为 chopsticks.in。 <br>
+第一行一个数 n，表示筷子数量。之后 n 行，每行两个数，表示每根筷子的开始坐标和结束坐标。</p>
+
+
+
+<h2 id="输出格式">输出格式</h2>
+
+<p>输出文件名为 chopsticks.out。 <br>
+输出一行，表示最多能放几根筷子。</p>
+
+
+
+<h2 id="样例输入">样例输入</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">5
+2 4
+1 12
+4 5
+7 10
+7 8</code></pre>
+
+
+
+<h2 id="样例输出">样例输出</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">2</code></pre>
+
+<h2 id="数据范围">数据范围</h2>
+
+<ul>
+<li>对于 30% 的数据，1 ≤ n ≤ 20。</li>
+<li>对于另外 20 % 的数据，1 ≤ si, ei ≤ 1000。</li>
+<li>对于 100% 的数据，1 ≤ n ≤ 100000，1 ≤ si, ei ≤ 100000000。</li>
+</ul>
+
+<h1 id="取石子-1-60-分">取石子 1 （60 分）</h1>
+
+<p>zyj 有 n 堆石子，最多取 m 堆石子，求在总石子数不超过 k 的情况下能取多少石子。</p>
+
+<h2 id="输入格式-1">输入格式</h2>
+
+<p>输入文件名为 stonea.in。 <br>
+第一行输入三个数字 n, m, k。 <br>
+第二行 n 个数字，表示每堆石头的数量。</p>
+
+
+
+<h2 id="输出格式-1">输出格式</h2>
+
+<p>输出文件名为 stonea.out。 <br>
+输出一个数字，表示答案。</p>
+
+
+
+<h2 id="样例输入-1">样例输入</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">4 3 5
+1 1 2 3</code></pre>
+
+
+
+<h2 id="样例输出-1">样例输出</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">5</code></pre>
+
+
+
+<h2 id="数据范围-1">数据范围</h2>
+
+<p>1 ≤ m ≤ n ≤ 20, 1 ≤ k≤ 10^8, 1 ≤ a_i ≤ 10^6</p>
+
+
+
+<h1 id="取石子-240-分">取石子 2（40 分）</h1>
+
+<p>题目同上题，输入文件名 stoneb.in，输出文件名 stoneb.out。</p>
+
+<h2 id="数据范围-2">数据范围</h2>
+
+<p>1 ≤ m ≤ n ≤ 200, 1 ≤ k ≤ 2500, 1 ≤ a_i ≤ 100</p>
+
+<h1 id="超级数100-分">超级数（100 分）</h1>
+
+<p>神犇 lyh 闲来无事，创造了一种概念叫做超级数对。当 a 能通过某种特定的变换方式变成 b，则称 a 和 b 为一对超级数对。</p>
+
+<p>为了完成变换，你可以执行以下两种操作： <br>
+* 将当前的数的二进制最右边加一个 0。（将x变为 2x） <br>
+* 在当前的数的十进制最右边加一个 1。（将x变为 10x+1）</p>
+
+<p>lyh 发明了超级数对之后突然想研究祘理，他给出了两个数 a 和 b，他想知道将 a 通过这两种操作变为 b 并输出最小的操作次数与中间过程的操作序列，或者说 a 和 b 并不是超级数对。</p>
+
+<h2 id="输入">输入</h2>
+
+<p>输入文件名为 super.in。 <br>
+输入数据共一行两个正整数 a, b。</p>
+
+
+
+<h2 id="输出">输出</h2>
+
+<p>输出文件名为 super.out。 <br>
+如果 a 和 b 不是超级数对，输出 <code>NO</code>，否则输出三行： <br>
+第一行输出 <code>YES</code>。 <br>
+第二行有一个整数 k 最小的操作序列长度。 <br>
+第三行输出操作序列 x1, x2, x3 .. xk。x1 = a, xk = b。x_i 由 x_i-1 通过上述两种操作变化而来。</p>
+
+
+
+<h2 id="输入样例-1">输入样例 1</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">2 162</code></pre>
+
+
+
+<h2 id="输出样例-1">输出样例 1</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs objectivec"><span class="hljs-literal">YES</span>
+<span class="hljs-number">5</span>
+<span class="hljs-number">2</span> <span class="hljs-number">4</span> <span class="hljs-number">8</span> <span class="hljs-number">81</span> <span class="hljs-number">162</span></code></pre>
+
+
+
+<h2 id="输入样例-2">输入样例 2</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs ">4 42</code></pre>
+
+
+
+<h2 id="输出样例-2">输出样例 2</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs objectivec"><span class="hljs-literal">NO</span></code></pre>
+
+
+
+<h2 id="数据范围-3">数据范围</h2>
+
+<p>对于 30% 的数据 1 ≤ a &lt; b ≤ 10^3； <br>
+对于 80% 的数据 1 ≤ a &lt; b ≤ 10^9； <br>
+对于 100% 的数据 1 ≤ a &lt; b ≤ 10^18。</p>

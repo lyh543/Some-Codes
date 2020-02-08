@@ -1,0 +1,8 @@
+5 18
+Dist 2
+Dist 2
+Time 4
+Time 14
+Time 32
+
+Right:28 My:38

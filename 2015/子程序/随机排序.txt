@@ -1,0 +1,5 @@
+setlocal enabledelayedexpansion
+set limit=10000
+for /l %%a in (1,1,%limit%) do set \!random!=%%a
+(for /f "tokens=1,* delims==" %%a in ('set\') do echo %%b) >a.txt
+pause

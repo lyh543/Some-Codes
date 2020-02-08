@@ -1,0 +1,25 @@
+::	1.用于计算时间差，单位为毫秒
+::	2.使用变量：timeBegin;timeEnd
+::	3.不可跨天！！！！！
+@echo off
+
+set timeBegin=%time:08=8%
+::获取开始时间的同时，将08转为8，防止cmd将其识别为八进制数，然后报错
+
+
+ping /n 3 127.0.0.1 >nul
+
+
+set timeEnd=%time:08=8%
+::获取结束时间，将08转为8
+
+set timeBegin=%timeBegin:09=9%
+set timeEnd=%timeEnd:09=9%
+::将09转为9
+
+for /f "tokens=1-8 delims=:. " %%a in ("%timeBegin% %timeEnd%") do (
+	set /a "secondThrough=3600*(%%e-%%a)+60*(%%f-%%b)+ (%%g-%%c)"
+	set /a "milliSecondThrough=10*(%%h-%%d)"
+)
+echo %secondThrough%s%milliSecondThrough%ms
+pause

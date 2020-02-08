@@ -1,0 +1,14 @@
+1 2
+acacacacacacac
+
+1 2
+abbaab
+
+1 2
+abacab
+
+1 1
+qqww
+
+1 2
+baaaab
