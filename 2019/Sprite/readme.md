@@ -2,12 +2,6 @@
 
 是大二的 C++ 程序设计课程的大作业。
 
-## 游戏下载
-
-[Release.zip](https://github.com/lyh543/Some-Codes/releases/download/Sprite/Sprite-v1.0-Windows-x86.zip)
-
-解压后即可运行。可能需要安装 `Resource` 目录下的 `Goudy Stout` 字体。
-
 ## 游戏简介
 
 就是猫捉老鼠游戏。游戏中的角色：
@@ -62,10 +56,9 @@ Windows 窗口、图片、音乐等功能使用了基于 Win32 API 的 `acllib.h
 
 可能需要安装 `Resource` 目录下的 `Goudy Stout` 字体。
 
-
 ### 编译环境
 
-理论上 gcc/g++ 也可以编译。
+理论上 gcc / g++ 也可以编译。
 
 已经通过的测试环境：Visual Studio 2019/2017, Windows 10 1909
 

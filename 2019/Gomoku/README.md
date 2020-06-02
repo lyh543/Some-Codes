@@ -8,6 +8,10 @@
 
 本程序用C语言用控制台实现了五子棋程序，包括简易的界面，以及了一个较为~弱智~简单的AI。
 
+## 环境配置
+
+Visual Studio 2019。
+
 ## UI部分：[GomokuUI.h](/Gomoku/Gomoku/GomokuUI.h)
 
 1. 定义结构`pointStruct`存储棋子的行和列.
