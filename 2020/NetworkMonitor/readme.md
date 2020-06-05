@@ -4,7 +4,7 @@
 
 理论上支持 Linux、Windows、Mac OS，但由于 scapy 对 Windows 支持较差，未在 Mac OS 上测试过，推荐在 Linux 上运行。
 
-![运行截图](https://lyh543.coding.net/p/pic-bed/d/pic-bed/git/raw/master/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png)  
+![运行截图](https://lyh543.coding.net/p/pic-bed/d/pic-bed/git/raw/master/349ddd1a81f359e4a49f1ceb6764ce9dad442a6de477e536407b2a65762d9555.png)  
 
 
 ## 使用
