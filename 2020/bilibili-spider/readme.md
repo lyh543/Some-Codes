@@ -11,7 +11,7 @@
 
 07.03 表示七月三日，00:31 表示时间（可能有重复），后面的数字分别表示[分区id](#分区id)为 `1,11,119,129,13,138,155,160,165,167,17,177,181,188,202,23,3,36,4,5,75,76` 的区的每日登陆人数。
 
-每一项人数是单碟递增的，由此猜测可能记录的是从 0 点开始的登陆人数。
+每一项人数是单调递增的，由此猜测可能记录的是从 0 点开始的登陆人数。
 
 区编号见后。
 
@@ -53,7 +53,7 @@
 
 找了一部分百大 up 主的名单。昵称、mid 均在 [bilibili_upstat/bilibili_100up](bilibili_upstat/bilibili_100up/) 下。
 
-首先在网上找到一份百大 up 名单的[图]，ocr 了一部分得到 [100up_namelist.txt]，再通过 [get_mid.py] 使用哔哩哔哩的搜索功能的爬虫，得到 `(搜索结果昵称, 搜索 keyword 昵称, 搜索结果 mid)` 的串，保存在 [100up_info.txt]。
+这里的实现方法是，在网上找到一份百大 up 名单的[图]，ocr 了一部分得到 [100up_namelist.txt]，再通过 [get_mid.py] 使用哔哩哔哩的搜索功能的爬虫，得到 `(搜索结果昵称, 搜索 keyword 昵称, 搜索结果 mid)` 的串，保存在 [100up_info.txt]。
 
 [图]:bilibili_upstat/bilibili_100up/bilibili_100.webp
 [100up_namelist.txt]:bilibili_upstat/bilibili_100up/100up_namelist.txt
@@ -75,9 +75,9 @@
 200099,6aSF6aOf44G54piG44GL44KI44Gh5o6o44GX,3,3,0
 ```
 
-代码见 [bilibili_upstat/bilibili_upstat.py]。此外，还有[使用代理的版本]（但是貌似都是透明代理，没用）、以[百大 up 主]为名单的[版本]。
+代码见 [bilibili_upstat/bilibili_upstat.py]。此外，还有防 API 调用太频繁，[使用代理的版本]（但是貌似都是透明代理，没用）、以[百大 up 主]为爬虫名单的[版本]。
 
-~~其实三个代码应该把类的函数独立为一个模块，就可以实现复用。小工程就算了~~
+~~其实三份代码应该相同的代码合并为一个模块，就可以实现代码复用。不过小工程就算了~~
 
 [bilibili_upstat/bilibili_upstat.py]:bilibili_upstat/bilibili_upstat.py
 [使用代理的版本]:bilibili_upstat/bilibili_upstat_proxy.py
