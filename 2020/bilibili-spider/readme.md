@@ -31,7 +31,10 @@
 
 ## zone 分区 id 和 名字对应关系
 
-参考：https://github.com/Vespa314/bilibili-api/blob/master/api.md
+B 站的分区向来很迷，也不公开。这里有两份不完全的分区表：
+
+> https://github.com/Vespa314/bilibili-api/blob/master/api.md  
+> https://wusiyu.me/bilibili-video-count/
 
 以逗号分割形式的完整数据见 [zone/zone.txt](zone/zone.txt)。以下为样例数据：
 
@@ -48,6 +51,9 @@
 15	连载剧集	http://www.bilibili.com/video/soap-three-1.html	11
 ```
 
+## bilibili_zone_videos 分区视频数
+
+见 https://wusiyu.me/bilibili-video-count/。
 
 ## bilibili_100up 百大 UP 主
 
@@ -118,3 +124,11 @@ ztLKx9fWt/u0rg==
 >>> print(base64.b64decode(a).decode())
 我是字符串
 ```
+
+## 参考链接
+
+https://www.bilibili.com/online.html
+https://github.com/Vespa314/bilibili-api/blob/master/api.md
+https://zhangshuqiao.org/2018-03/Bilibili弹幕文件的解析/
+https://wusiyu.me/bilibili-video-count/
+https://github.com/uupers/BiliSpider/wiki
