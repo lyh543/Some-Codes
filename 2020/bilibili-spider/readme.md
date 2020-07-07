@@ -57,6 +57,8 @@ B 站的分区向来很迷，也不公开。这里有两份不完全的分区表
 
 ## bilibili_100up 百大 UP 主
 
+**提醒：**由于图的问题以及 ocr 的过程的问题，某些 up 主的昵称识别错误（如 `泠鸢yousa` 被识别为 `冷鸢yousa`）。这些错误并没有更正。使用的时候可以关注一下百大 up 主的粉丝数。
+
 找了一部分百大 up 主的名单。昵称、mid 均在 [bilibili_upstat/bilibili_100up](bilibili_upstat/bilibili_100up/) 下。
 
 这里的实现方法是，在网上找到一份百大 up 名单的[图]，ocr 了一部分得到 [100up_namelist.txt]，再通过 [get_mid.py] 使用哔哩哔哩的搜索功能的爬虫，得到 `(搜索结果昵称, 搜索 keyword 昵称, 搜索结果 mid)` 的串，保存在 [100up_info.txt]。
