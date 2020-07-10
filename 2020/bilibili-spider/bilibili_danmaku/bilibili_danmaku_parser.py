@@ -9,4 +9,6 @@ for file in files:  # 遍历文件夹
     for element in tree.xpath('//i//d'):
         info = element.xpath('./@p')[0].split(',')
         text = element.xpath('./text()')[0]
-        print(info, text)
+        # print(info, text)
+        with open('danmaku.txt', 'a+', encoding='utf-8') as f:
+            f.write(text + '\n')

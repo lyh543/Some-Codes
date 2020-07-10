@@ -113,7 +113,7 @@ B 站的分区向来很迷，也不公开。这里有两份不完全的分区表
 * 发送者的 ID，用于「屏蔽此弹幕的发送者」功能
 * 弹幕在弹幕数据库中 rowID，用于「历史弹幕」功能
 
-这里写一个 [bilibili_danmaku/bilibili_danmaku_parser.py](bilibili_danmaku/bilibili_danmaku_parser.py) 作为解析弹幕 xml 的示例。
+这里写一个 [bilibili_danmaku_parser.py](bilibili_danmaku/bilibili_danmaku_parser.py)，将文件夹内的弹幕文字内容全部输出到 [damnmaku.txt](bilibili_danmaku/damnmaku.txt) 中。再通过词云 `wordcloud` 模块生成词云 [cloud.png](bilibili_danmaku/cloud.png)（代码见[cloud.py](bilibili_danmaku/cloud.py)）。这里生成的是《擅长捉弄的高木同学 第二季》的弹幕的词云。
 
 ## base64 编码、解码
 
