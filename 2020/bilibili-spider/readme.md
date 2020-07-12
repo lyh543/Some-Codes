@@ -57,7 +57,7 @@ B 站的分区向来很迷，也不公开。这里有两份不完全的分区表
 
 ## bilibili_100up 百大 UP 主
 
-**提醒：**由于图的问题以及 ocr 的过程的问题，某些 up 主的昵称识别错误（如 `泠鸢yousa` 被识别为 `冷鸢yousa`）。这些错误并没有更正。使用的时候可以关注一下百大 up 主的粉丝数。
+**提醒**：由于图的问题以及 ocr 的过程的问题，某些 up 主的昵称识别错误（如 `泠鸢yousa` 被识别为 `冷鸢yousa`）。这些错误并没有更正。使用的时候可以关注一下百大 up 主的粉丝数。
 
 找了一部分百大 up 主的名单。昵称、mid 均在 [bilibili_upstat/bilibili_100up](bilibili_upstat/bilibili_100up/) 下。
 
@@ -129,8 +129,8 @@ ztLKx9fWt/u0rg==
 
 ## 参考链接
 
-https://www.bilibili.com/online.html
-https://github.com/Vespa314/bilibili-api/blob/master/api.md
-https://zhangshuqiao.org/2018-03/Bilibili弹幕文件的解析/
-https://wusiyu.me/bilibili-video-count/
-https://github.com/uupers/BiliSpider/wiki
+* https://www.bilibili.com/online.html
+* https://github.com/Vespa314/bilibili-api/blob/master/api.md
+* https://zhangshuqiao.org/2018-03/Bilibili弹幕文件的解析/
+* https://wusiyu.me/bilibili-video-count/
+* https://github.com/uupers/BiliSpider/wiki
