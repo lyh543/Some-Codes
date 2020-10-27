@@ -26,7 +26,7 @@
 ## 2020 年
 
 * [零件搜索引擎](2020/零件搜索引擎/)
-* [**网络流量监控软件**](https://github.com/lyh543/NetworkMonitor)
+* [**网络流量分析软件**](2020/NetworkMonitor)
 * [B 站信息爬虫](2020/bilibili-spider)
-* [微软学生俱乐部活动签到微信小程序——阮薇薇签到啦](https://github.com/uestc-msc/wechat-mini-program)
+* [**微软学生俱乐部活动签到微信小程序——阮薇薇签到啦**](https://github.com/uestc-msc/wechat-mini-program)
 * [电子科技大学图书馆馆藏数字化服务平台 图书下载](2020/uestc-library-downloader)
