@@ -30,3 +30,10 @@
 * [B 站信息爬虫](2020/bilibili-spider)
 * [**微软学生俱乐部活动签到微信小程序——阮薇薇签到啦**](https://github.com/uestc-msc/wechat-mini-program)
 * [电子科技大学图书馆馆藏数字化服务平台 图书下载](2020/uestc-library-downloader)
+
+## 2021 年
+
+* 微软学生俱乐部活动签到 Web App——阮薇薇签到啦 [前端](https://github.com/uestc-msc/uestcmsc_webapp_frontend) [后端](https://github.com/uestc-msc/uestcmsc_webapp_backend)
+* [UESTC 健康打卡平台自动打卡脚本](https://github.com/lyh543/UESTC-ncov-AutoReport)
+* 
+
