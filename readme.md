@@ -36,5 +36,6 @@
 
 * 微软学生俱乐部活动签到 Web App——阮薇薇签到啦 [前端](https://github.com/uestc-msc/uestcmsc_webapp_frontend) [后端](https://github.com/uestc-msc/uestcmsc_webapp_backend)
 * [UESTC 健康打卡平台自动打卡脚本](https://github.com/lyh543/UESTC-ncov-AutoReport)
-* 
+* 毕设 - ddars
+* VuePress 主题：[vuepress-theme-blog-material](https://github.com/lyh543/vuepress-theme-blog-material)
 
