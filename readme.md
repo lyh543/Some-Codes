@@ -16,26 +16,27 @@
 
 ## 2019 年
 
-* [**简易的五子棋 AI**](2019/Gomoku/)
+* C 课程设计 - [**简易的五子棋 AI**](2019/Gomoku/)
 * [微软学生俱乐部 2019 年会 混乱代码大赛](2019/Chaos_Code.cpp)
 * [大整数四则计算器](2019/BigInteger.cpp)
-* [**一个模拟 CMD 的 C++ 程序**](2019/SimpleCMD)
+* 数据结构与算法 课程设计 - [**一个模拟 CMD 的 C++ 程序**](2019/SimpleCMD)
 * [Floyd 算法](2019/Floyd.cpp)
-* [**精灵游戏**](2019/Sprite/)
+* C++ 课程设计 - [**精灵游戏**](2019/Sprite/)
 
 ## 2020 年
 
-* [零件搜索引擎](2020/零件搜索引擎/)
-* [**网络流量分析软件**](2020/NetworkMonitor)
-* [B 站信息爬虫](2020/bilibili-spider)
+* 数学建模 - [零件搜索引擎](2020/零件搜索引擎/)
+* 课程设计 - [**网络流量分析软件**](2020/NetworkMonitor)
+* 生产实习 - [B 站信息爬虫](2020/bilibili-spider)
 * [**微软学生俱乐部活动签到微信小程序——阮薇薇签到啦**](https://github.com/uestc-msc/wechat-mini-program)
 * [电子科技大学图书馆馆藏数字化服务平台 图书下载](2020/uestc-library-downloader)
 * [易查分 爬虫](2020/yichafen-spyder)
 
 ## 2021 年
 
-* 微软学生俱乐部活动签到 Web App——阮薇薇签到啦 [前端](https://github.com/uestc-msc/uestcmsc_webapp_frontend) [后端](https://github.com/uestc-msc/uestcmsc_webapp_backend)
+* 微软学生俱乐部活动签到 Web App - 阮薇薇签到啦 [前端](https://github.com/uestc-msc/uestcmsc_webapp_frontend) [后端](https://github.com/uestc-msc/uestcmsc_webapp_backend)
 * [UESTC 健康打卡平台自动打卡脚本](https://github.com/lyh543/UESTC-ncov-AutoReport)
-* 毕设 - ddars
+* 软件开发实验 课程设计 - 网盘备份软件 [后端](https://github.com/Aurora-DriveSyncer/Aurora-DriveSyncer-backend)
+* 毕业设计 - ddars
 * VuePress 主题：[vuepress-theme-blog-material](https://github.com/lyh543/vuepress-theme-blog-material)
 
