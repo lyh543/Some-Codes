@@ -40,3 +40,7 @@
 * 毕业设计 - ddars
 * VuePress 主题：[vuepress-theme-blog-material](https://github.com/lyh543/vuepress-theme-blog-material)
 
+## 2022 年
+
+* [DeepSleep](https://github.com/Jasper-1024/DeepSleep) 为所有 APP 生成屏蔽规则 [DeepSleep-gen-config.py](2022/DeepSleep-gen-config.py)
+* [电子科技大学 VPN URL 转换](2022/uestc-vpn-url-converter.html)

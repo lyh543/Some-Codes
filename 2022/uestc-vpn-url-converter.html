@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vpn.uestc.edu.cn URL 转换</title>
+</head>
+<body>
+
+<div class="block">
+    <div>
+        <label>
+            <span class="label">
+            原始 URL：
+            </span>
+            <input id="input-origin-url"/>
+        </label>
+        <a id="href-origin-url" href="#" target="_blank">
+            go!
+        </a>
+    </div>
+    <div>
+        <label>
+        <span class="label">
+            代理 URL：
+        </span>
+            <input id="input-vpn-url"/>
+        </label>
+        <a id="href-vpn-url" href="#" target="_blank">
+            go!
+        </a>
+    </div>
+
+    <div class="tips">
+        <p>学校 VPN 把原始域名作为代理域名的一部分的方法会被 Chrome 识别为假冒链接，属正常现象。</p>
+        <p>如出现转换错误，请到 <a href="https://github.com/lyh543/Some-Codes/blob/master/2022/uestc-vpn-url-converter.html" target="_blank">GitHub Repo</a> 联系作者进行修正。</p>
+        <p>MIT LICENSE</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    class UrlInfo {
+        /**
+         * @param schema {string}
+         * @param host {string}
+         * @param port {number | null}
+         * @param path {string}
+         */
+        constructor(schema, host, port, path) {
+            this.schema = schema;
+            this.host = host;
+            this.port = port;
+            this.path = path;
+        }
+
+        /**
+         * @param url {string}
+         */
+        static fromOrigin(url) {
+            const urlInfo = new UrlInfo();
+
+            const schemaPattern = '://';
+            if (url.match(schemaPattern)) {
+                [urlInfo.schema, url] = url.split(schemaPattern);
+            } else {
+                urlInfo.schema = 'http';
+            }
+
+            const pathPosition = url.indexOf('/');
+            if (pathPosition !== -1) {
+                urlInfo.path = url.slice(pathPosition);
+                url = url.slice(0, pathPosition);
+            } else {
+                urlInfo.path = '';
+            }
+
+            const portPattern = /:\d+$/;
+            if (url.match(portPattern)) {
+                urlInfo.port = parseInt(url.match(portPattern)[0].match(/\d+/)[0]);
+                url = url.replace(portPattern, '');
+            } else {
+                urlInfo.port = null;
+            }
+
+            urlInfo.host = url;
+            return urlInfo;
+        }
+
+        /**
+         * @param url {string}
+         */
+        static fromVpn(url) {
+            const urlInfo = new UrlInfo();
+
+            [, url] = url.split('://');
+            let [host, path] = url.split('.vpn.uestc.edu.cn:8118');
+            urlInfo.path = path;
+
+            const httpsPattern = /-s$/;
+            if (host.match(httpsPattern)) {
+                urlInfo.schema = 'https';
+                host = host.replace(httpsPattern, '');
+            } else {
+                urlInfo.schema = 'http';
+            }
+
+            const portPattern = /-\d+-p$/
+            if (host.match(portPattern)) {
+                urlInfo.port = parseInt(host.match(portPattern)[0].match(/\d+/)[0]);
+                host = host.replace(portPattern, '');
+            } else {
+                urlInfo.port = null;
+            }
+
+            urlInfo.host = host
+                .replaceAll('--', '/')
+                .replaceAll('-', '.')
+                .replaceAll('/', '-');
+
+            return urlInfo;
+        }
+
+        toOrigin() {
+            let url = this.schema + '://';
+
+            url = url + this.host;
+
+            if (this.port !== null) {
+                url = url + ':' + this.port
+            }
+
+            return url + this.path;
+        }
+
+
+        toVpn() {
+            let convertedHost = this.host
+                .replaceAll('-', '--')
+                .replaceAll('.', '-');
+
+            if (this.port !== null) {
+                convertedHost = convertedHost + `-${this.port}-p`
+            }
+
+            if (this.schema === 'https') {
+                convertedHost = convertedHost + '-s'
+            } else if (this.schema !== 'http') {
+                throw new Error('only supports http and https');
+            }
+
+            return `http://${convertedHost}.vpn.uestc.edu.cn:8118${this.path}`;
+        }
+    }
+</script>
+
+<script>
+    const inputOriginUrl = document.getElementById('input-origin-url');
+    const inputVpnUrl = document.getElementById('input-vpn-url');
+    const hrefOriginUrl = document.getElementById('href-origin-url');
+    const hrefVpnUrl = document.getElementById('href-vpn-url');
+
+    inputOriginUrl.oninput = function () {
+        const originUrl = inputOriginUrl.value;
+        try {
+            inputVpnUrl.value = UrlInfo.fromOrigin(originUrl).toVpn();
+            updateHref();
+        } catch (e) {
+            inputOriginUrl.value = e;
+        }
+    }
+
+    inputVpnUrl.oninput = function () {
+        const vpnUrl = inputVpnUrl.value;
+        try {
+            inputOriginUrl.value = UrlInfo.fromVpn(vpnUrl).toOrigin();
+            updateHref();
+        } catch (e) {
+            inputOriginUrl.value = e;
+        }
+    }
+
+    function updateHref() {
+        hrefOriginUrl.href = inputOriginUrl.value;
+        hrefVpnUrl.href = inputVpnUrl.value;
+    }
+</script>
+
+<script>
+    // belows are unit tests
+
+    const testcases = [
+        [
+            'https://labsafetest.uestc.edu.cn/redir.php?catalog_id=121&object_id=2733',
+            'http://labsafetest-uestc-edu-cn-s.vpn.uestc.edu.cn:8118/redir.php?catalog_id=121&object_id=2733'
+        ],
+        [
+            'http://baidu.com',
+            'http://baidu-com.vpn.uestc.edu.cn:8118'
+        ],
+        [
+            'https://baidu.com',
+            'http://baidu-com-s.vpn.uestc.edu.cn:8118'
+        ],
+        [
+            'https://baidu.com/',
+            'http://baidu-com-s.vpn.uestc.edu.cn:8118/'
+        ],
+        [
+            'https://www.baidu.com/',
+            'http://www-baidu-com-s.vpn.uestc.edu.cn:8118/'
+        ],
+        [
+            'https://baidu.com:443/',
+            'http://baidu-com-443-p-s.vpn.uestc.edu.cn:8118/'
+        ],
+        [
+            'http://baidu.com:80/',
+            'http://baidu-com-80-p.vpn.uestc.edu.cn:8118/'
+        ],
+        [
+            'https://ieeexplore.ieee.org',
+            'http://ieeexplore-ieee-org-s.vpn.uestc.edu.cn:8118'
+        ]
+    ];
+
+    function assertEqual(v1, v2) {
+        if (v1 !== v2) {
+            throw new Error(`Unit test case error:\n${v1}\n${v2}`);
+        }
+    }
+
+    for (const [originUrl, vpnUrl] of testcases) {
+        console.log(`Current testcase:\n${originUrl}\n${vpnUrl}`);
+        assertEqual(UrlInfo.fromOrigin(originUrl).toOrigin(), originUrl);
+        assertEqual(UrlInfo.fromVpn(vpnUrl).toOrigin(), originUrl);
+        assertEqual(UrlInfo.fromOrigin(originUrl).toVpn(), vpnUrl);
+        assertEqual(UrlInfo.fromVpn(vpnUrl).toVpn(), vpnUrl);
+        console.log('Pass!')
+    }
+</script>
+</body>
+
+<style>
+    .block {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .label {
+        display: inline-block;
+        width: 100px;
+    }
+
+    input {
+        width: 500px;
+    }
+
+    .tips {
+        position: relative;
+        margin: 12px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    p {
+        margin: 4px;
+    }
+</style>
+</html>
