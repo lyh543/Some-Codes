@@ -43,4 +43,4 @@
 ## 2022 年
 
 * [DeepSleep](https://github.com/Jasper-1024/DeepSleep) 为所有 APP 生成屏蔽规则 [DeepSleep-gen-config.py](2022/DeepSleep-gen-config.py)
-* [电子科技大学 VPN URL 转换](2022/uestc-vpn-url-converter.html)
+* [电子科技大学 VPN URL 转换](2022/uestc-vpn-url-converter.html) [在线 Demo](https://htmlpreview.github.io/?https://github.com/lyh543/Some-Codes/blob/master/2022/uestc-vpn-url-converter.html)
