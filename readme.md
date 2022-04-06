@@ -44,3 +44,4 @@
 
 * [DeepSleep](https://github.com/Jasper-1024/DeepSleep) 为所有 APP 生成屏蔽规则 [DeepSleep-gen-config.py](2022/DeepSleep-gen-config.py)
 * [电子科技大学 VPN URL 转换](2022/uestc-vpn-url-converter.html) [在线 Demo](https://htmlpreview.github.io/?https://github.com/lyh543/Some-Codes/blob/master/2022/uestc-vpn-url-converter.html)
+* [VPS Backup Utils](https://github.com/lyh543/vps_backup_utils)：一个调用 shell 命令备份 VPS 数据的 Python 库
