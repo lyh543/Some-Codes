@@ -45,3 +45,12 @@
 * [DeepSleep](https://github.com/Jasper-1024/DeepSleep) 为所有 APP 生成屏蔽规则 [DeepSleep-gen-config.py](2022/DeepSleep-gen-config.py)
 * [电子科技大学 VPN URL 转换](2022/uestc-vpn-url-converter.html) [在线 Demo](https://htmlpreview.github.io/?https://github.com/lyh543/Some-Codes/blob/master/2022/uestc-vpn-url-converter.html)
 * [VPS Backup Utils](https://github.com/lyh543/vps_backup_utils)：一个调用 shell 命令备份 VPS 数据的 Python 库
+
+## 2025 年
+
+用 LLM 写小玩具，效率真的很高。
+
+* [ls-inotify-watches.sh](./2025/ls-inotify-watches.sh) 统计 Linux 系统中各进程的 inotify watches 数量
+* [how-to](./2025/how-to.sh) 用自然语言让 GitHub Copilot 生成 shell 命令行，然后执行
+* [微信动态表情录屏转 GIF](https://github.com/lyh543/wechat-sticker-screenrecord-to-gif) | [在线 Demo](https://wechat-stickers.lyh543.cn/)
+* [WebDAV Server - Docker](https://github.com/lyh543/webdav-docker)
