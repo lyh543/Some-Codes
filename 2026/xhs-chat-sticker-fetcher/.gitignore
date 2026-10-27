@@ -1,0 +1,8 @@
+*cookies.txt
+.venv/
+__pycache__/
+*.egg-info/
+build/
+stickers/
+.claude
+.mcp.json

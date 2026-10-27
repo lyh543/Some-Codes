@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xhs-sticker-fetcher"
+version = "0.1.0"
+description = "从小红书聊天记录中抓取最近的表情包"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "xhshow>=0.2.0",
+    "requests>=2.31",
+]
+
+[project.scripts]
+xhs-stickers = "xhs_stickers:main"
+
+[tool.setuptools]
+py-modules = ["xhs_stickers"]
